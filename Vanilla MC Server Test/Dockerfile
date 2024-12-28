@@ -13,6 +13,7 @@ ENV MOTD="A Minecraft Server"
 ENV GAMEMODE="survival"
 ENV FORCE_GAMEMODE="false"
 ENV SERVER_IP: ""
+ENV PVP="true"
 
 CMD ["sh", "-c", "\
      echo max-players=$MAX_PLAYERS > server.properties && \
@@ -21,5 +22,6 @@ CMD ["sh", "-c", "\
      echo server-port=$SERVER_PORT >> server.properties && \
      echo motd=$MOTD >> server.properties && \
      echo server-ip=$SERVER_IP >> server.properties && \
+     echo pvp=$PVP >> server.properties && \ 
      java -Xmx1024M -Xms1024M -jar server.jar nogui \
      "]
