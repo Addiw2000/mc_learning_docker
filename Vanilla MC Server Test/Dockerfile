@@ -12,10 +12,10 @@ ENV SERVER_PORT=25565
 ENV MOTD="A Minecraft Server"
 ENV GAMEMODE="survival"
 ENV FORCE_GAMEMODE="false"
-ENV SERVER_IP: ""
+ENV SERVER_IP=""
 ENV PVP="true"
 
-CMD ["sh", "-c", "\
+CMD ["sh", "-c", " \
      echo max-players=$MAX_PLAYERS > server.properties && \
      echo gamemode=$GAMEMODE >> server.properties && \
      echo force-gamemode=$FORCE_GAMEMODE >> server.properties && \
