@@ -12,6 +12,7 @@ ENV SERVER_PORT=25565
 ENV MOTD="A Minecraft Server"
 ENV GAMEMODE="survival"
 ENV FORCE_GAMEMODE="false"
+ENV SERVER_IP: ""
 
 CMD ["sh", "-c", "\
      echo max-players=$MAX_PLAYERS > server.properties && \
@@ -19,5 +20,6 @@ CMD ["sh", "-c", "\
      echo force-gamemode=$FORCE_GAMEMODE >> server.properties && \
      echo server-port=$SERVER_PORT >> server.properties && \
      echo motd=$MOTD >> server.properties && \
+     echo server-ip=$SERVER_IP >> server.properties && \
      java -Xmx1024M -Xms1024M -jar server.jar nogui \
      "]
