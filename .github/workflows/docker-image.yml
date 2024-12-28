@@ -2,9 +2,11 @@ name: Build and Push Docker Image
 
 on:
   push:
+    branches:
+      - master
     paths:
       - Dockerfile
-      - '**/*.dockerfile' # Optional: Watch other Dockerfile variations
+      - '**/*.dockerfile'
 
 jobs:
   build-and-push:
