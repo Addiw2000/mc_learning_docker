@@ -1,6 +1,6 @@
 services:
    mc:
-    image: mc_learning_docker:latest
+    image: addiwa/mc_learning_docker:latest
     restart: unless-stopped
     container_name: mc_learning_docker
     ports:
