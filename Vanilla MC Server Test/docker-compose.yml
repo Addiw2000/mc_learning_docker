@@ -1,0 +1,16 @@
+services:
+   mc:
+    image: mc_learning_docker:latest
+    restart: unless-stopped
+    container_name: mc_learning_docker
+    ports:
+      - "36969:36969"
+    environment:
+      MAX_PLAYERS: 69
+      SERVER_PORT: 36969
+      MOTD: "A Test Server to learn building Docker Images"
+    volumes:
+      - data:/minecraft
+
+volumes:
+  data:
