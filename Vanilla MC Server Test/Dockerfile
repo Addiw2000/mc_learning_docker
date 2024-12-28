@@ -3,6 +3,7 @@ FROM openjdk:21-jdk-slim
 WORKDIR /minecraft
 
 ADD https://piston-data.mojang.com/v1/objects/4707d00eb834b446575d89a61a11b5d548d8c001/server.jar server.jar
+ADD https://github.com/Addiw2000/mc_learning_docker/blob/master/Vanilla%20MC%20Server%20Test/server-icon.png server-icon.png
 
 RUN echo "eula=true" > eula.txt 
 
